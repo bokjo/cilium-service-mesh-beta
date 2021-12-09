@@ -27,7 +27,7 @@ kind cluster create --config kind-config.yaml
 Install Cilium using the images built for the Service Mesh beta, and with the feature flag on:
 
 ```
-cilium install --version :<SERVICE_MESH_BETA> --relay-version :<SERVICE_MESH_BETA> --operator-image <OPERATOR_SERVICE_MESH_IMAGE>  --config debug=true --config debug-verbose=datapath --config enable-envoy-config=true --config monitor-aggregation=none --kube-proxy-replacement=probe 
+cilium install --version -service-mesh:v1.11.0-beta.1 --config enable-envoy-config=true --kube-proxy-replacement=probe
 cilium hubble enable
 cilium hubble port-forward&
 ```
